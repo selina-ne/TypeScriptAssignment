@@ -4,13 +4,34 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Memory Game</title>
+    <link href="src/style.css" rel="stylesheet" type="text/css"/>
+    <h1> MEMORY GAME</h1>
+
+
+    <style type="text/css">
+    #grid {
+        width: absolut;
+        height: absulut;
+        background-color: #353535;
+        position: absolute;
+    }
+
+    </style>
 </head>
 
 <body>
     <my-beispiel></my-beispiel>
     <script defer src="./build/bundle.js"></script>
-    <input type="text" id="myInput" />
+    <div class="container">
+        <button type="button" class="button" onclick="reset();">
+            Nochmal spielen
+          </button>
+        <div class="grid" id="grid">
+        <div class="hidden-element" id="gameover">
+            <img src="Bilder/gewonnen.png">
+        </div>
+    </div>
 </body>
 
 </html>

@@ -1,0 +1,22 @@
+#grid {
+    display: inline-grid;
+    gap: 10px;
+    grid-template-columns: repeat(5, 1fr); 
+    position: center;
+}
+
+#body {
+    background: #353535;
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    color: #05FFE2;
+    line-height: 25px;
+    text-align: center
+  }
+
+.hidden-element {
+    display: none;
+}
