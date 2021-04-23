@@ -12,6 +12,7 @@ body {
   text-align: center
 }
 
+<<<<<<< HEAD
 .content-wrapper{
   margin-top: 100px;
   display: flex;
@@ -27,6 +28,23 @@ body {
   width: 600px;
   margin: 0 auto;
 }
+=======
+body {
+    background-color: #353535;
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    /* text-transform: uppercase; */
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 35px;
+    text-align: center
+  }
+>>>>>>> d91701fb4c0771b288266602250f448ff202fe90
 
 h1 {
     font-size: 50px;
@@ -42,13 +60,17 @@ h1 {
 }
 
 button {
-    font-size: 18px;
-    font-weight: 300;
+    font-size: 20px;
+    font-weight: 500;
     text-transform: uppercase;
     font-family: 'Roboto', 'Open Sans', sans-serif;
+    color: #fff !important;
+    background: #0E5F55;
+    border-color: #05FFE2;
+    border-radius: 40px; 
+    padding: 15px 25px;   
 
 }
-
 .radio-label {
   margin: 0.5rem;
   color: white;
