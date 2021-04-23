@@ -19,6 +19,11 @@ var cardsCollected = 0;
 var card1: HTMLImageElement;
 var card2: HTMLImageElement;
 
+//RadioButtons
+let radio1: HTMLInputElement = document.getElementById("radio-1") as HTMLInputElement;
+let radio2: HTMLInputElement = document.getElementById("radio-2") as HTMLInputElement;
+let radio3: HTMLInputElement = document.getElementById("radio-3") as HTMLInputElement;
+
 startGame();
 
 function startGame() {
@@ -40,6 +45,11 @@ function startGame() {
 }
 
 function cardClicked(e: UIEvent) {
+  //Radio-Button status checking
+  console.log("RadioButton 1 is " + radio1.checked);
+  console.log("RadioButton 2 is " + radio2.checked);
+  console.log("RadioButton 3 is " + radio3.checked);
+
   const val = e.target as HTMLImageElement;
   if(canClick === true) {
     const cardId = val.getAttribute("card-id");
