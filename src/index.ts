@@ -37,8 +37,8 @@ function startGame() {
 
     // Bildindex speichern fuer später als string
     img.setAttribute("card-id", String(i));
-    img.setAttribute("width", "150px");
-    img.setAttribute("height", "150px");
+    img.setAttribute("width", "130px");
+    img.setAttribute("height", "130px");
     img.addEventListener("click", cardClicked);
     grid?.appendChild(img);
   }
