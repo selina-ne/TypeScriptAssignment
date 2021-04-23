@@ -1,22 +1,68 @@
 #grid {
     display: inline-grid;
     gap: 10px;
-    grid-template-columns: repeat(5, 1fr); 
+    grid-template-columns: repeat(4, 1fr); 
     position: center;
 }
 
 #body {
-    background: #353535;
+    background-color: #353535;
     font-size: 18px;
     font-weight: 300;
     text-transform: uppercase;
     font-family: 'Roboto', 'Open Sans', sans-serif;
     box-sizing: border-box;
-    color: #05FFE2;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     line-height: 25px;
     text-align: center
   }
 
+h1 {
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    color: #05FFE2;
+}
+
 .hidden-element {
     display: none;
 }
+
+button {
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+
+}
+
+.radio {
+  margin: 0.5rem;
+  input[type="radio"] {
+    position: absolute;
+    /* opacity: 0;
+    + .radio-label {
+      &:before {
+        content: '';
+        background: $color1;
+        border-radius: 100%;
+        border: 1px solid darken($color1, 25%);
+        display: inline-block;
+        width: 1.4em;
+        height: 1.4em;
+        position: relative;
+        top: -0.2em;
+        margin-right: 1em; 
+        vertical-align: top;
+        cursor: pointer;
+        text-align: center;
+        transition: all 250ms ease; */
+      }
+  }
+}
+

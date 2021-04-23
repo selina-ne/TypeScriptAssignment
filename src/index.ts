@@ -3,14 +3,12 @@
 import { helloWorld, Beispiel } from "./myModule";
 import { alertMe } from "./myOtherModule";
 
-var images: string[] = ["Bilder/avocado.jpg", "Bilder/blume.jpg", "Bilder/dino.jpg", "Bilder/drink.jpg", 
-                        //"Bilder/einhorn.jpg","Bilder/lama.jpg","Bilder/loewe.jpg","Bilder/muffin.jpg", 
-                        //"Bilder/palme.jpg","Bilder/pilz.jpg","Bilder/pistole.jpg","Bilder/schmetterling.jpg",
+var images: string[] = ["Bilder/avocado.jpg", "Bilder/blume.jpg", "Bilder/dino.jpg", "Bilder/drink.jpg", "Bilder/einhorn.jpg","Bilder/lama.jpg",  
+                        //"Bilder/loewe.jpg","Bilder/muffin.jpg","Bilder/palme.jpg","Bilder/pilz.jpg","Bilder/pistole.jpg","Bilder/schmetterling.jpg",
                         //"Bilder/sonne.jpg","Bilder/teddy.jpg",
 
-                        "Bilder/avocado.jpg", "Bilder/blume.jpg", "Bilder/dino.jpg", "Bilder/drink.jpg", 
-                        //"Bilder/einhorn.jpg","Bilder/lama.jpg","Bilder/loewe.jpg","Bilder/muffin.jpg", 
-                        //"Bilder/palme.jpg","Bilder/pilz.jpg","Bilder/pistole.jpg","Bilder/schmetterling.jpg",
+                        "Bilder/avocado.jpg", "Bilder/blume.jpg", "Bilder/dino.jpg", "Bilder/drink.jpg", "Bilder/einhorn.jpg","Bilder/lama.jpg",
+                        //"Bilder/loewe.jpg", "Bilder/muffin.jpg", "Bilder/palme.jpg","Bilder/pilz.jpg","Bilder/pistole.jpg","Bilder/schmetterling.jpg",
                         //"Bilder/sonne.jpg","Bilder/teddy.jpg"
                       ];
 
@@ -60,7 +58,7 @@ function cardClicked(e: UIEvent) {
     if(counter == 2) {
       counter = 0;
       canClick = false;
-      setTimeout(check, 1000);
+      setTimeout(check, 800);
     }
   }
 }
@@ -75,11 +73,16 @@ function check() {
     card2.removeEventListener("click", cardClicked);
 
     cardsCollected += 2;
-
+    
+    // erst sichtbar wenn gewonnen
     if(cardsCollected === images.length) {
         console.log("Du hast gewonnen!");
         var gameover = document.querySelector<HTMLImageElement>("#gameover");
         gameover?.classList.toggle("hidden-element");
+
+        var playagain = document.querySelector<HTMLButtonElement>("#playAgain");
+        playagain?.classList.toggle("hidden-element");
+
         grid?.classList.toggle("hidden-element");
     }
   } else {
