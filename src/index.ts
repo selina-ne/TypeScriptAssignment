@@ -3,13 +3,13 @@
 import { helloWorld, Beispiel } from "./myModule";
 import { alertMe } from "./myOtherModule";
 
-var images: string[] = ["Bilder/avocado.jpg", "Bilder/blume.jpg", "Bilder/dino.jpg", "Bilder/drink.jpg", "Bilder/einhorn.jpg","Bilder/lama.jpg",  
-                        //"Bilder/loewe.jpg","Bilder/muffin.jpg","Bilder/palme.jpg","Bilder/pilz.jpg","Bilder/pistole.jpg","Bilder/schmetterling.jpg",
-                        //"Bilder/sonne.jpg","Bilder/teddy.jpg",
+var images: string[] = ["Bilder/avocado.png", "Bilder/blume.png", "Bilder/dino.png", "Bilder/drink.png", "Bilder/einhorn.png","Bilder/lama.png",  
+                        //"Bilder/loewe.png","Bilder/muffin.png","Bilder/palme.png","Bilder/pilz.png","Bilder/pistole.png","Bilder/schmetterling.png",
+                        //"Bilder/sonne.png","Bilder/teddy.png",
 
-                        "Bilder/avocado.jpg", "Bilder/blume.jpg", "Bilder/dino.jpg", "Bilder/drink.jpg", "Bilder/einhorn.jpg","Bilder/lama.jpg",
-                        //"Bilder/loewe.jpg", "Bilder/muffin.jpg", "Bilder/palme.jpg","Bilder/pilz.jpg","Bilder/pistole.jpg","Bilder/schmetterling.jpg",
-                        //"Bilder/sonne.jpg","Bilder/teddy.jpg"
+                        "Bilder/avocado.png", "Bilder/blume.png", "Bilder/dino.png", "Bilder/drink.png", "Bilder/einhorn.png","Bilder/lama.png",
+                        //"Bilder/loewe.png", "Bilder/muffin.png", "Bilder/palme.png","Bilder/pilz.png","Bilder/pistole.png","Bilder/schmetterling.png",
+                        //"Bilder/sonne.png","Bilder/teddy.png"
                       ];
 
 const grid = document.querySelector<HTMLInputElement>("#grid");
@@ -28,7 +28,7 @@ function startGame() {
   for(let i = 0; i < images.length; i++)
   {
     const img = document.createElement("img");
-    img.setAttribute("src", "Bilder/hintergrund.jpg");
+    img.setAttribute("src", "Bilder/hintergrund.png");
 
     // Bildindex speichern fuer später als string
     img.setAttribute("card-id", String(i));
@@ -96,3 +96,4 @@ function check() {
 function reset() {
   startGame();
 }
+
