@@ -86,8 +86,8 @@ function check() {
         grid?.classList.toggle("hidden-element");
     }
   } else {
-    card1.setAttribute("src", "Bilder/hintergrund.jpg");
-    card2.setAttribute("src", "Bilder/hintergrund.jpg");
+    card1.setAttribute("src", "Bilder/hintergrund.png");
+    card2.setAttribute("src", "Bilder/hintergrund.png");
   }
 
   canClick = true;
