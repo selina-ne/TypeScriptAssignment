@@ -16,31 +16,37 @@
         background-color: #353535;
         position: center;
     }
-
     </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+    </style> 
 </head>
 
 <body>
     <my-beispiel></my-beispiel>
     <script defer src="./build/bundle.js"></script>
 
-    <div class="container radio-buttons">
-        <div class="radio">
-          <input id="radio-1" name="radio" type="radio" checked>
-          <label for="radio-1" class="radio-label"><h2>12 Karten</h2></label>
-        </div>
+    <div class="example">
+        <div align="left">
+        <label class="radio-button1">
+          <input type="radio" class="radio-button__input" id="choice1-1" name="choice1">
+          <span class="radio-button__control"></span>
+          <span class="radio-button__label"><h2>12 Karten</h2></span>
+        </label>
+        <div align="left"></div>
+        <label class="radio-button2">
+          <input type="radio" class="radio-button__input" id="choice1-2" name="choice1">
+          <span class="radio-button__control"></span>
+          <span class="radio-button__label"><h2>24 Karten</h2></span>
+        </label>
+        <div align="left"></div>
+        <label class="radio-button3">
+            <input type="radio" class="radio-button__input" id="choice1-2" name="choice1">
+            <span class="radio-button__control"></span>
+            <span class="radio-button__label"><h2>36 Karten</h2></span>
+          </label>
+    </div>
       
-        <div class="radio">
-          <input id="radio-2" name="radio" type="radio">
-          <label  for="radio-2" class="radio-label"><h2>24 Karten</h2></label>
-        </div>
-        <div class="radio">
-            <input id="radio-3" name="radio" type="radio">
-            <label  for="radio-3" class="radio-label"><h2>36 Karten</h2></label>
-          </div>
-      </div>
-      
-
     <div class="container">
         <div class="hidden-element" id="gameover">
             <img src="Bilder/gewonnen.png">
@@ -50,7 +56,6 @@
         </button>
         <div class="grid" id="grid">
         </div>
-    
     </div>
 </body>
 

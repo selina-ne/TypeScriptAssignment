@@ -37,8 +37,8 @@ function startGame() {
 
     // Bildindex speichern fuer später als string
     img.setAttribute("card-id", String(i));
-    img.setAttribute("width", "130px");
-    img.setAttribute("height", "130px");
+    img.setAttribute("width", "150px");
+    img.setAttribute("height", "150px");
     img.addEventListener("click", cardClicked);
     grid?.appendChild(img);
   }
@@ -46,9 +46,9 @@ function startGame() {
 
 function cardClicked(e: UIEvent) {
   //Radio-Button status checking
-  console.log("RadioButton 1 is " + radio1.checked);
-  console.log("RadioButton 2 is " + radio2.checked);
-  console.log("RadioButton 3 is " + radio3.checked);
+  console.log("radio-button1 is " + radio1.checked);
+  console.log("radio-button2 is " + radio2.checked);
+  console.log("radio-button3 is " + radio3.checked);
 
   const val = e.target as HTMLImageElement;
   if(canClick === true) {
@@ -77,7 +77,7 @@ function check() {
   if(card1.getAttribute("src") === card2.getAttribute("src")) {
     card1.setAttribute("src", "Bilder/karteweg.jpg");
     card2.setAttribute("src", "Bilder/karteweg.jpg");
-
+  
     // verhindert, dass karte nochmal geklickt werden kann
     card1.removeEventListener("click", cardClicked);
     card2.removeEventListener("click", cardClicked);
@@ -95,7 +95,8 @@ function check() {
 
         grid?.classList.toggle("hidden-element");
     }
-  } else {
+  } 
+else {
     card1.setAttribute("src", "Bilder/hintergrund.png");
     card2.setAttribute("src", "Bilder/hintergrund.png");
   }
