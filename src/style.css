@@ -25,10 +25,32 @@ body {
   display: inline-grid;
   gap: 20px;
   position: relative;
-  background-size:80%;
+  background-size:100%;
   grid-template-columns: repeat(4, 1fr); 
   width: 600px;
-  margin-top: -160px;
+  margin-top: 40px;
+  margin-left: -60px;
+}
+
+.grid24 {
+  display: inline-grid;
+  gap: 20px;
+  position: relative;
+  background-size:100%;
+  grid-template-columns: repeat(6, 1fr); 
+  width: 600px;
+  margin-top: 40px;
+  margin-left: -400px;
+}
+
+.grid36 {
+  display: inline-grid;
+  gap: 20px;
+  position: relative;
+  background-size:100%;
+  grid-template-columns: repeat(6, 1fr); 
+  width: 600px;
+  margin-top: 60px;
   margin-left: -60px;
 }
 
@@ -40,7 +62,6 @@ h1 {
     font-family: 'Iceland', 'Open Sans', sans-serif;
     color: #05FFE2;
     margin-top: 150px;
-    margin-bottom: 110px;
 }
 h2 {
     font-size: 20px;
@@ -70,10 +91,13 @@ button {
     padding: 15px 30px;
     margin-top: 30px;  
 }
-
+#home {
+  margin-top: 70px;
+}
+/* 
 radio-button {
     cursor: pointer;
-    /* float: left; */
+    /* float: left; 
     position: relative;
 
   }
@@ -115,4 +139,4 @@ radio-button {
   
   .radio-button__control {
     transform: scale(0.75);
-  }
+  } */

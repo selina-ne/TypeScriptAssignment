@@ -7,6 +7,11 @@ export default {
         format: "iife",
         file: "./build/bundle.js"
     },
+    input: "./src/home.ts",
+    output: {
+        format: "iife",
+        file: "./build/home.js"
+    },
     plugins: [
         typescript({
             tsconfig: "./tsconfig.json"

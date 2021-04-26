@@ -24,39 +24,25 @@
 
 <body>
     <my-beispiel></my-beispiel>
-    <script defer src="./build/bundle.js"></script>
 
-    <div class="example">
-        <div align="left">
-        <label class="radio-button1">
-          <input type="radio" class="radio-button__input" id="choice1-1" name="choice1">
-          <span class="radio-button__control"></span>
-          <span class="radio-button__label"><h2>12 Karten</h2></span>
-        </label>
-        <div align="left"></div>
-        <label class="radio-button2">
-          <input type="radio" class="radio-button__input" id="choice1-2" name="choice1">
-          <span class="radio-button__control"></span>
-          <span class="radio-button__label"><h2>24 Karten</h2></span>
-        </label>
-        <div align="left"></div>
-        <label class="radio-button3">
-            <input type="radio" class="radio-button__input" id="choice1-2" name="choice1">
-            <span class="radio-button__control"></span>
-            <span class="radio-button__label"><h2>36 Karten</h2></span>
-          </label>
-    </div>
-      
     <div class="container">
         <div class="hidden-element" id="gameover">
             <img src="Bilder/gewonnen.png">
         </div>
-        <button type="button" id="playAgain" class="hidden-element" onclick="reset();">
+        <!-- <button type="button" id="playAgain" class="hidden-element" onclick="reset();">
             Nochmal spielen
-        </button>
+        </button> -->
         <div class="grid" id="grid">
         </div>
     </div>
+    <script defer src="./build/bundle.js"></script>
 </body>
-
+<footer>
+    <div class="example">
+        <div align="center">
+            <button type="button" id="home">
+                HOME
+            </button>
+    </div>
+</footer>
 </html>

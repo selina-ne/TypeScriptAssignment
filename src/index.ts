@@ -3,14 +3,27 @@
 import { helloWorld, Beispiel } from "./myModule";
 import { alertMe } from "./myOtherModule";
 
-var images: string[] = ["Bilder/avocado.png", "Bilder/blume.png", "Bilder/dino.png", "Bilder/drink.png", "Bilder/einhorn.png","Bilder/lama.png",  
-                        //"Bilder/loewe.png","Bilder/muffin.png","Bilder/palme.png","Bilder/pilz.png","Bilder/pistole.png","Bilder/schmetterling.png",
-                        //"Bilder/sonne.png","Bilder/teddy.png",
+const images12: string[] = ["Bilder/avocado.png", "Bilder/ufo.png", "Bilder/dino.png", "Bilder/drink.png", "Bilder/pistole.png","Bilder/schmetterling.png", 
 
-                        "Bilder/avocado.png", "Bilder/blume.png", "Bilder/dino.png", "Bilder/drink.png", "Bilder/einhorn.png","Bilder/lama.png",
-                        //"Bilder/loewe.png", "Bilder/muffin.png", "Bilder/palme.png","Bilder/pilz.png","Bilder/pistole.png","Bilder/schmetterling.png",
-                        //"Bilder/sonne.png","Bilder/teddy.png"
-                      ];
+                          "Bilder/avocado.png", "Bilder/ufo.png", "Bilder/dino.png", "Bilder/drink.png", "Bilder/pistole.png","Bilder/schmetterling.png",
+                          ];
+
+const images24: string[] = ["Bilder/avocado.png", "Bilder/ufo.png", "Bilder/dino.png", "Bilder/drink.png", "Bilder/pistole.png","Bilder/schmetterling.png",  
+                          "Bilder/loewe.png","Bilder/diamant.png","Bilder/palme.png","Bilder/pilz.png","Bilder/einhorn.png","Bilder/lama.png",
+
+                          "Bilder/avocado.png", "Bilder/ufo.png", "Bilder/dino.png", "Bilder/drink.png", "Bilder/pistole.png","Bilder/schmetterling.png",
+                          "Bilder/loewe.png", "Bilder/diamant.png", "Bilder/palme.png","Bilder/pilz.png","Bilder/einhorn.png","Bilder/lama.png",
+                          ];
+
+const images36: string[] = ["Bilder/avocado.png", "Bilder/blume.png", "Bilder/dino.png", "Bilder/drink.png", "Bilder/einhorn.png","Bilder/lama.png",  
+                            "Bilder/loewe.png","Bilder/muffin.png","Bilder/palme.png","Bilder/pilz.png","Bilder/pistole.png","Bilder/schmetterling.png",
+                            "Bilder/sonne.png","Bilder/teddy.png","Bilder/diamant.png","Bilder/klee.png","Bilder/ufo.png","Bilder/krone.png",
+
+                            "Bilder/avocado.png", "Bilder/blume.png", "Bilder/dino.png", "Bilder/drink.png", "Bilder/einhorn.png","Bilder/schmetterling.png",
+                            "Bilder/loewe.png", "Bilder/muffin.png", "Bilder/palme.png","Bilder/pilz.png","Bilder/pistole.png","Bilder/lama.png",
+                            "Bilder/sonne.png","Bilder/teddy.png", "Bilder/diamant.png","Bilder/klee.png","Bilder/ufo.png","Bilder/krone.png",
+
+                            ];
 
 const grid = document.querySelector<HTMLInputElement>("#grid");
 var counter: number = 0;
@@ -19,14 +32,31 @@ var cardsCollected = 0;
 var card1: HTMLImageElement;
 var card2: HTMLImageElement;
 
-//RadioButtons
-let radio1: HTMLInputElement = document.getElementById("radio-1") as HTMLInputElement;
-let radio2: HTMLInputElement = document.getElementById("radio-2") as HTMLInputElement;
-let radio3: HTMLInputElement = document.getElementById("radio-3") as HTMLInputElement;
+var size: string;
+var images: string[];
+
+let homeBtn: HTMLButtonElement = document.getElementById("home") as HTMLButtonElement;
 
 startGame();
 
 function startGame() {
+
+  size = window.localStorage.getItem("size")!;
+  console.log(size);
+
+  if(size === "12") {
+    images = images12;
+    grid?.classList.toggle("grid");
+  }else if(size === "24") {
+    images = images24;
+    grid?.classList.toggle("grid24");
+  }else if(size === "36") {
+    images = images36;
+    grid?.classList.toggle("grid36");
+  }
+  
+  homeBtn.addEventListener("click", home);
+
   //https://flaviocopes.com/how-to-shuffle-array-javascript/
   images.sort((): number => Math.random() - 0.5);
 
@@ -37,6 +67,7 @@ function startGame() {
 
     // Bildindex speichern fuer später als string
     img.setAttribute("card-id", String(i));
+    
     img.setAttribute("width", "150px");
     img.setAttribute("height", "150px");
     img.addEventListener("click", cardClicked);
@@ -45,10 +76,11 @@ function startGame() {
 }
 
 function cardClicked(e: UIEvent) {
+
   //Radio-Button status checking
-  console.log("radio-button1 is " + radio1.checked);
-  console.log("radio-button2 is " + radio2.checked);
-  console.log("radio-button3 is " + radio3.checked);
+  // console.log("radio-button1 is " + radio1.checked);
+  // console.log("radio-button2 is " + radio2.checked);
+  // console.log("radio-button3 is " + radio3.checked);
 
   const val = e.target as HTMLImageElement;
   if(canClick === true) {
@@ -104,7 +136,10 @@ else {
   canClick = true;
 }
 
-function reset() {
-  startGame();
+
+
+//kommt man auf startseite
+function home(e: UIEvent) {
+  window.location.href = "start.html";
 }
 
