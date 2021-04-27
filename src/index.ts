@@ -43,6 +43,7 @@ function startGame() {
 
   size = window.localStorage.getItem("size")!;
   console.log(size);
+  size = "24";
 
   if(size === "12") {
     images = images12;
@@ -122,8 +123,8 @@ function check() {
         var gameover = document.querySelector<HTMLImageElement>("#gameover");
         gameover?.classList.toggle("hidden-element");
 
-        var playagain = document.querySelector<HTMLButtonElement>("#playAgain");
-        playagain?.classList.toggle("hidden-element");
+        // var playagain = document.querySelector<HTMLButtonElement>("#playAgain");
+        // playagain?.classList.toggle("hidden-element");
 
         grid?.classList.toggle("hidden-element");
     }
