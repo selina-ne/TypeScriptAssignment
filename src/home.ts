@@ -10,13 +10,13 @@ function start(e: UIEvent) {
     
     if (radio1.checked) {
         //console.log("1");
-        localStorage.setItem("size", "12");
+        window.localStorage.setItem("size", "12");
     } else if (radio2.checked) {
         //console.log("2");
-        localStorage.setItem("size", "24");
+        window.localStorage.setItem("size", "24");
     }else if (radio3.checked) {
         //console.log("3");
-        localStorage.setItem("size", "36");
+        window.localStorage.setItem("size", "36");
     }
 
     window.location.href = "index.html";

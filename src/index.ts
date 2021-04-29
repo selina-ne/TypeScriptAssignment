@@ -32,7 +32,7 @@ var cardsCollected = 0;
 var card1: HTMLImageElement;
 var card2: HTMLImageElement;
 
-var size: string;
+var size: string = "24";
 var images: string[];
 
 let homeBtn: HTMLButtonElement = document.getElementById("home") as HTMLButtonElement;
@@ -42,12 +42,12 @@ startGame();
 function startGame() {
 
   size = window.localStorage.getItem("size")!;
-  console.log(size);
-  size = "24";
+  // console.log(size);
+  //size = "24";
 
   if(size === "12") {
     images = images12;
-    grid?.classList.toggle("grid");
+    grid?.classList.toggle("grid12");
   }else if(size === "24") {
     images = images24;
     grid?.classList.toggle("grid24");
@@ -69,8 +69,17 @@ function startGame() {
     // Bildindex speichern fuer später als string
     img.setAttribute("card-id", String(i));
     
-    img.setAttribute("width", "150px");
-    img.setAttribute("height", "150px");
+    if(size === "12") {
+      img.setAttribute("width", "150px");
+      img.setAttribute("height", "150px");
+    }else if(size === "24") {
+      img.setAttribute("width", "115px");
+      img.setAttribute("height", "115px");
+    }else if(size === "36") {
+      img.setAttribute("width", "110px");
+      img.setAttribute("height", "110px");
+    }
+
     img.addEventListener("click", cardClicked);
     grid?.appendChild(img);
   }
