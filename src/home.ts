@@ -19,5 +19,5 @@ function start(e: UIEvent) {
         window.localStorage.setItem("size", "36");
     }
 
-    window.location.href = "index.html";
+    window.location.href = "game.html";
 }

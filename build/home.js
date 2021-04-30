@@ -19,7 +19,7 @@
             //console.log("3");
             localStorage.setItem("size", "36");
         }
-        window.location.href = "index.html";
+        window.location.href = "game.html";
     }
 
 }());

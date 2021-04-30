@@ -113,7 +113,7 @@
   }
   //kommt man auf startseite
   function home(e) {
-      window.location.href = "start.html";
+      window.location.href = "index.html";
   }
 
 }());

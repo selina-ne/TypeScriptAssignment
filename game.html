@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <link href="src/style.css" rel="stylesheet" type="text/css"/>
+    <h1> MEMORY GAME</h1>
+
+
+    <style type="text/css">
+    #grid {
+        width: absolut;
+        height: absolut;
+        background-color: #353535;
+        position: center;
+    }
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+    </style> 
+</head>
+
+<body>
+    <my-beispiel></my-beispiel>
+
+    <div class="container">
+        <div class="hidden-element" id="gameover">
+            <img src="Bilder/gewonnen.png">
+        </div>
+        <div class="grid" id="grid">
+        </div>
+    </div>
+    <script defer src="./build/bundle.js"></script>
+</body>
+<footer>
+    <div class="example">
+        <div align="center">
+            <button type="button" id="home">
+                HOME
+            </button>
+    </div>
+</footer>
+</html>

@@ -150,6 +150,6 @@ else {
 
 //kommt man auf startseite
 function home(e: UIEvent) {
-  window.location.href = "start.html";
+  window.location.href = "index.html";
 }
 
